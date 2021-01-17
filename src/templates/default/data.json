@@ -1,7 +1,131 @@
 {
-  "hello": {
-    "input": "<input type='text' name='hello' placeholder='Enter the value' value='{{{value}}}'>",
-    "output": "<h2>{{{value}}}</h2>",
-    "value": "Hello World"
-  }
+  "company_name": {
+    "input": "<input type='text' name='company_name' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Company Name' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Company Name"
+  },
+  "your_name": {
+    "input": "<input type='text' name='your_name' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Your Name' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "company_gstin": {
+    "input": "<input type='text' name='company_gstin' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Company GSTN' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "address": {
+    "input": "<input type='text' name='address' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Company Adddress' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "city": {
+    "input": "<input type='text' name='city' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='City' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "company_logo": {
+    "input": "<input type='text' name='company_logo' class='px-3 focus:outline-none text-right text-3xl focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Company Name' value='{{{value}}}'>",
+    "output": "<span class='text-3xl'>{{{value}}}</span>",
+    "value": "Invoice"
+  },
+  "bill_to": {
+    "input": "<input type='text' name='bill_to' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Bill To' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Bill To"
+  },
+  "client_company": {
+    "input": "<input type='text' name='client_company' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Company Name' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "client_name": {
+    "input": "<input type='text' name='client_name' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Client's Name' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "client_gstin": {
+    "input": "<input type='text' name='client_gstin' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Client's GSTN' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "client_address": {
+    "input": "<input type='text' name='client_address' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Client's Address' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": ""
+  },
+  "invoice_number_label": {
+    "input": "<input type='text' name='invoice_number_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Invoice Number' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Invoice#"
+  },
+  "invoice_number": {
+    "input": "<input type='text' name='invoice_number' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Number' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "INV-23"
+  },
+  "invoice_date_label": {
+    "input": "<input type='text' name='invoice_date_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Invoice Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Invoice Data"
+  },
+  "invoice_date": {
+    "input": "<input type='text' name='invoice_date' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Jan 20, 2020"
+  },
+  "due_date_label": {
+    "input": "<input type='text' name='due_date_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Due Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Due Data"
+  },
+  "due_date": {
+    "input": "<input type='text' name='due_date' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Jan 30, 2020"
+  },
+  "notes_label": {
+    "input": "<input type='text' name='notes_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Notes"
+  },
+  "notes": {
+    "input": "<textarea name='notes' class='px-3 focus:outline-none focus:ring w-full bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "It was nice doing buisness with you"
+  },
+  "terms_label": {
+    "input": "<input type='text' name='terms_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Terms & Conditions"
+  },
+  "terms": {
+    "input": "<textarea name='terms' class='px-3 focus:outline-none focus:ring w-full bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
+    "output": "<span>{{{value}}}</span>",
+    "value": "Please make the payment by the due date."
+  },
+  "repeater": [
+    {
+      "description_1": {
+        "input": "<input name='description_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      },
+      "quantity_1": {
+        "input": "<input data-type='repeater' name='quantity_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      },
+      "rate_1": {
+        "input": "<input name='rate_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      },
+      "amount_1": {
+        "input": "<input name='amount_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      }
+    }
+  ]
 }

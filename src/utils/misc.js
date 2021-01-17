@@ -13,7 +13,21 @@ export function extractContext(data, type_to_extract="input") {
   const context = {}
   for (const property in data) {
     var entity = data[property]
-    context[property] = renderHandleBar(entity[type_to_extract], {"value": entity.value})
+    if (entity.hasOwnProperty("value")) {
+      context[property] = renderHandleBar(entity[type_to_extract], {"value": entity.value})
+    } else if (Array.isArray(entity)) {
+      var new_entity = []
+      entity.forEach((value) => {
+        var new_obj = {}
+          for (const subProperty in value) {
+            var subEntity = value[subProperty]
+            new_obj[subProperty] = renderHandleBar(subEntity[type_to_extract], {"value": subEntity.value})
+          }
+          new_entity.push(new_obj)
+      })
+      context[property] = new_entity
+    }
   }
+  console.log("Context ", context)
   return context
 }
