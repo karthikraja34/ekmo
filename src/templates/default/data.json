@@ -1,0 +1,7 @@
+{
+  "hello": {
+    "input": "<input type='text' name='hello' placeholder='Enter the value' value='{{{value}}}'>",
+    "output": "<h2>{{{value}}}</h2>",
+    "value": "Hello World"
+  }
+}
