@@ -106,23 +106,45 @@
   },
   "repeater": [
     {
-      "description_1": {
-        "input": "<input name='description_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
+      "description": {
+        "input": "<input data-type='repeater' data-index=1 name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
-      "quantity_1": {
-        "input": "<input data-type='repeater' name='quantity_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
+      "quantity": {
+        "input": "<input data-type='repeater' data-index=1 name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
-      "rate_1": {
-        "input": "<input name='rate_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
+      "rate": {
+        "input": "<input data-type='repeater' data-index=1 name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
-      "amount_1": {
-        "input": "<input name='amount_1' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
+      "amount": {
+        "input": "<input data-type='repeater' data-index=1 name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      }
+    },
+        {
+      "description": {
+        "input": "<input data-type='repeater' data-index=2 name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      },
+      "quantity": {
+        "input": "<input data-type='repeater' data-index=2 name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      },
+      "rate": {
+        "input": "<input data-type='repeater' data-index=2 name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
+        "output": "<span>{{{value}}}</span>",
+        "value": ""
+      },
+      "amount": {
+        "input": "<input data-type='repeater' data-index=2 name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       }

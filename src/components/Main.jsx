@@ -14,12 +14,14 @@ class MainComponent extends Component {
   }
 
   onChange = (e) => {
-    console.log("Val ", e.target.dataset)
+    const data = {...this.state.data}
     if (e.target.dataset && e.target.dataset.type === "repeater") {
-
+      const index = e.target.dataset.index;
+      data["repeater"][index-1][e.target.name].value = e.target.value;
+    } else {
+      data[e.target.name].value = e.target.value;
     }
-    var data = {...this.state.data}
-    data[e.target.name].value = e.target.value;
+
     this.setState({data})
   }
 

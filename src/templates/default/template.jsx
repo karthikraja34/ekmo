@@ -39,34 +39,22 @@ var template = `
     Amount
     </div>
   </div>
-  <div class="flex items-start py-2 -mx-1">
+  {{#each repeater}} 
+      <div class="flex items-start py-2 -mx-1">
     <div class="flex-1 px-2">
-        Brochure Design
+       {{{this.description}}}
     </div>
     <div class="w-20 px-1 text-right">
-    2
+   {{{this.quantity}}}
     </div>
     <div class="w-32 px-1 text-right">
-    $ 200
+    {{{this.rate}}}
     </div>
     <div class="w-20 px-2 text-right">
-    $ 400
+    {{{this.amount}}}
     </div>
   </div>
-    <div class="flex items-start py-2 -mx-1">
-    <div class="flex-1 px-2">
-       Logo Design
-    </div>
-    <div class="w-20 px-1 text-right">
-    1
-    </div>
-    <div class="w-32 px-1 text-right">
-    $ 100
-    </div>
-    <div class="w-20 px-2 text-right">
-    $ 100
-    </div>
-  </div>
+  {{/each}}
   <div class="mt-10">
   {{{notes_label}}}<br/>
   {{{notes}}}
