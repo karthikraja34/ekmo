@@ -9,7 +9,7 @@ class MainComponent extends Component {
     super(props);
     this.state = {
       "previewMode": false,
-      data: data
+      data:  JSON.parse(JSON.stringify(data))
     }
   }
 
@@ -17,7 +17,7 @@ class MainComponent extends Component {
     const data = {...this.state.data}
     if (e.target.dataset && e.target.dataset.type === "repeater") {
       const index = e.target.dataset.index;
-      data["repeater"][index-1][e.target.name].value = e.target.value;
+      data["repeater"][index][e.target.name].value = e.target.value;
     } else {
       data[e.target.name].value = e.target.value;
     }
@@ -25,15 +25,31 @@ class MainComponent extends Component {
     this.setState({data})
   }
 
-  render() {
-    const rawHTML = renderHandleBar(template, extractContext(this.state.data, this.state.previewMode ? "output" : "input"))
+  onClick = (e) => {
+    if (e.target.name === "add-item") {
+      const stateData = {...this.state.data}
+      const clonedData = JSON.parse(JSON.stringify(data["repeater"][0]));
+      stateData["repeater"].push(clonedData)
+      this.setState({"data": stateData})
+    } else if (e.target.name === "delete-item") {
+      const index = e.target.dataset.index;
+      const data = {...this.state.data}
+      data["repeater"].splice(index, 1);
+      this.setState({data})
+    }
+  }
 
+  render() {
+    const rawHTML = renderHandleBar(template, extractContext(this.state.data, this.state.previewMode))
     return (
       <div>
         {parse(rawHTML, {
           replace: domNode => {
             if (domNode.name === "input" || domNode.name === "textarea") {
               domNode.attribs.onChange = this.onChange;
+            }
+            if (domNode.name === "button") {
+              domNode.attribs.onClick = this.onClick;
             }
             return domNode
           }

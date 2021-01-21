@@ -107,44 +107,44 @@
   "repeater": [
     {
       "description": {
-        "input": "<input data-type='repeater' data-index=1 name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "quantity": {
-        "input": "<input data-type='repeater' data-index=1 name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "rate": {
-        "input": "<input data-type='repeater' data-index=1 name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "amount": {
-        "input": "<input data-type='repeater' data-index=1 name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       }
     },
         {
       "description": {
-        "input": "<input data-type='repeater' data-index=2 name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "quantity": {
-        "input": "<input data-type='repeater' data-index=2 name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "rate": {
-        "input": "<input data-type='repeater' data-index=2 name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "amount": {
-        "input": "<input data-type='repeater' data-index=2 name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       }
