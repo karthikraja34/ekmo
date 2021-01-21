@@ -11,7 +11,7 @@ class MainComponent extends Component {
     super(props);
     this.state = {
       "previewMode": false,
-      data: data
+      data:  JSON.parse(JSON.stringify(data))
     }
   }
 
@@ -50,9 +50,22 @@ class MainComponent extends Component {
 
   }
 
-  render() {
-    const rawHTML = renderHandleBar(template, extractContext(this.state.data, this.state.previewMode ? "output" : "input"))
+  onClick = (e) => {
+    if (e.target.name === "add-item") {
+      const stateData = {...this.state.data}
+      const clonedData = JSON.parse(JSON.stringify(data["repeater"][0]));
+      stateData["repeater"].push(clonedData)
+      this.setState({"data": stateData})
+    } else if (e.target.name === "delete-item") {
+      const index = e.target.dataset.index;
+      const data = {...this.state.data}
+      data["repeater"].splice(index, 1);
+      this.setState({data})
+    }
+  }
 
+  render() {
+    const rawHTML = renderHandleBar(template, extractContext(this.state.data, this.state.previewMode))
     return (
       <div>
         <div id="invoice">
