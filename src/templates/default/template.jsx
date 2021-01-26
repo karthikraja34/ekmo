@@ -87,4 +87,4 @@ var template = `
 </div>
 </div>
 `
-export default template;
+export default template; 
