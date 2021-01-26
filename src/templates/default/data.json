@@ -55,32 +55,32 @@
     "value": ""
   },
   "invoice_number_label": {
-    "input": "<input type='text' name='invoice_number_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Invoice Number' value='{{{value}}}'>",
+    "input": "<input type='text' name='invoice_number_label' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Invoice Number' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
     "value": "Invoice#"
   },
   "invoice_number": {
-    "input": "<input type='text' name='invoice_number' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Number' value='{{{value}}}'>",
+    "input": "<input type='text' name='invoice_number' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Number' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
     "value": "INV-23"
   },
   "invoice_date_label": {
-    "input": "<input type='text' name='invoice_date_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Invoice Date' value='{{{value}}}'>",
+    "input": "<input type='text' name='invoice_date_label' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Invoice Date' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": "Invoice Data"
+    "value": "Invoice Date"
   },
   "invoice_date": {
-    "input": "<input type='text' name='invoice_date' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Date' value='{{{value}}}'>",
+    "input": "<input type='text' name='invoice_date' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Date' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
     "value": "Jan 20, 2020"
   },
   "due_date_label": {
-    "input": "<input type='text' name='due_date_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Due Date' value='{{{value}}}'>",
+    "input": "<input type='text' name='due_date_label' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Due Date' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": "Due Data"
+    "value": "Due Date"
   },
   "due_date": {
-    "input": "<input type='text' name='due_date' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
+    "input": "<input type='text' name='due_date' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
     "value": "Jan 30, 2020"
   },
@@ -107,44 +107,44 @@
   "repeater": [
     {
       "description": {
-        "input": "<input data-type='repeater' data-index={{index}} name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='description' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "quantity": {
-        "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "rate": {
-        "input": "<input data-type='repeater' data-index={{index}} name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='rate' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "amount": {
-        "input": "<input data-type='repeater' data-index={{index}} name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='amount' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       }
     },
         {
       "description": {
-        "input": "<input data-type='repeater' data-index={{index}} name='description' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='description' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "quantity": {
-        "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "rate": {
-        "input": "<input data-type='repeater' data-index={{index}} name='rate' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='rate' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       },
       "amount": {
-        "input": "<input data-type='repeater' data-index={{index}} name='amount' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
+        "input": "<input data-type='repeater' data-index={{index}} name='amount' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
         "value": ""
       }

@@ -22,21 +22,23 @@ var template = `
       {{{client_city}}} <br/>
     </div>
     <div class="w-2/4">
-      <table class="w-full"><tr><td>{{{invoice_number_label}}}</td><td>{{{invoice_number}}}</td></tr><tr><td>{{{invoice_date_label}}}</td><td>{{{invoice_date}}}</td></tr><tr><td>{{{due_date_label}}}</td><td>{{{due_date}}}</td></tr></table>
+      <table class="w-full table-fixed" ><tr><td>{{{invoice_number_label}}}</td></div><td>{{{invoice_number}}}</td></tr><tr><td>{{{invoice_date_label}}}</td><td>{{{invoice_date}}}</td></tr><tr><td>{{{due_date_label}}}</td><td>{{{due_date}}}</td></tr></table>
     </div>
   </div>
   <div class="flex items-start py-2 -mx-1 mt-10 bg-gray-600 text-white">
     <div class="flex-1 px-2">
       Item Description
     </div>
-    <div class="w-20 px-1 text-right">
+    <div class="w-32 px-1 text-left">
       Quantity
     </div>
-    <div class="w-32 px-1 text-right">
+    <div class="w-20 px-1 text-left">
       Rate
     </div>
-    <div class="w-20 px-2 text-right">
+    <div class="w-20 px-2 text-left">
       Amount
+    </div>
+    <div class="w-1 px-2">
     </div>
   </div>
   {{#each repeater}} 
@@ -44,13 +46,13 @@ var template = `
       <div class="flex-1 px-2">
         {{{this.description}}}
       </div>
-      <div class="w-20 px-1 text-right">
+      <div class="w-32 px-1 text-left">
         {{{this.quantity}}}
       </div>
-      <div class="w-32 px-1 text-right">
+      <div class="w-20 px-1 text-left">
         {{{this.rate}}}
       </div>
-      <div class="w-20 px-2 text-right">
+      <div class="w-20 px-2 text-left">
         {{{this.amount}}}
       </div>
       <div class="w-1 px-2">
@@ -69,7 +71,7 @@ var template = `
   {{#unless previewMode}}
   <div>
   <button name="add-item" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Add Item 
-    <svg class="w-4 h-4 inline object-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+    <svg class="w-4 h-4 inline object-top pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
     </svg>
   </button>
