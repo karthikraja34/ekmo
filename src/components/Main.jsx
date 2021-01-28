@@ -11,7 +11,7 @@ class MainComponent extends Component {
     super(props);
     this.state = {
       "previewMode": false,
-      data:  JSON.parse(JSON.stringify(data))
+      data: JSON.parse(JSON.stringify(data))
     }
   }
 
@@ -27,7 +27,7 @@ class MainComponent extends Component {
     this.setState({ data })
   }
 
-  printPDF = () => {   
+  printPDF = () => {
     //for temp loading
     document.body.classList.add("cursor-wait")
 
@@ -46,21 +46,21 @@ class MainComponent extends Component {
       link.download = `invoice.pdf`
       link.click()
     })
-      .catch(err => {console.log(err)})
+      .catch(err => { console.log(err) })
 
   }
 
   onClick = (e) => {
     if (e.target.name === "add-item") {
-      const stateData = {...this.state.data}
+      const stateData = { ...this.state.data }
       const clonedData = JSON.parse(JSON.stringify(data["repeater"][0]));
       stateData["repeater"].push(clonedData)
-      this.setState({"data": stateData})
+      this.setState({ "data": stateData })
     } else if (e.target.name === "delete-item") {
       const index = e.target.dataset.index;
-      const data = {...this.state.data}
+      const data = { ...this.state.data }
       data["repeater"].splice(index, 1);
-      this.setState({data})
+      this.setState({ data })
     }
   }
 
