@@ -4,15 +4,17 @@ import axios from 'axios';
 import {extractContext, renderHandleBar} from "../utils/misc";
 import template from "../templates/default/template";
 import data from "../templates/default/data.json";
-import printicon from "../assets/print.svg";
+import loadspinner from "../assets/loading.svg";
 
 class MainComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      "previewMode": false,
+      "previewMode": false,      
+      loading: false,
       data:  JSON.parse(JSON.stringify(data))
     }
+    this.invoiceRef = React.createRef();
   }
 
   onChange = (e) => {
@@ -41,34 +43,36 @@ class MainComponent extends Component {
     }
   }
 
-  printPDF = () => {
-    //for temp loading
-    document.body.classList.add("cursor-wait")
-
-    const invoicePreview = document.getElementById('invoice').innerHTML;
-    return axios.get(`http://localhost:4000/getPDF`, {
-      responseType: 'arraybuffer',
-      headers: {
-        'Accept': 'application/pdf'
-      },
-      params: { invoicePreview }
-    }).then((response) => {
-      document.body.classList.remove("cursor-wait")
-      const blob = new Blob([response.data], { type: 'application/pdf' })
+  printPDF = () => {     
+    this.setState({loading:!this.state.loading})   
+    const htmlComponent = this.state.data.header+this.invoiceRef.current.outerHTML+this.state.data.footer;
+    return axios(
+      `${process.env.REACT_APP_EKMO_SERVER_ENDPOINT}/downloadpdf`,
+        {       
+          method: 'POST',          
+          data: {htmlComponent},
+          responseType: 'blob', // important
+        }
+      ).then((response) => {      
+      const blob = new Blob([response.data], { type: 'application/pdf' })            
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
       link.download = `invoice.pdf`
+      this.setState({loading:!this.state.loading})
       link.click()
     })
-      .catch(err => { console.log(err) })
-
+      .catch(err => { 
+        console.log(err) 
+        this.setState({loading:!this.state.loading})
+      })
+     
   }
 
   render() {
     const rawHTML = renderHandleBar(template, extractContext(this.state.data, this.state.previewMode))
     return (
       <div>
-        <div id="invoice">
+        <div ref={this.invoiceRef}>
           {parse(rawHTML, {
             replace: domNode => {
               if (domNode.name === "input" || domNode.name === "textarea") {
@@ -87,7 +91,12 @@ class MainComponent extends Component {
           }}>
             Toggle Preview Mode
           </button>
-          {this.state.previewMode ? <img src={printicon} alt="print pdf" className="w-11 float-right cursor-pointer" onClick={this.printPDF} /> : <React.Fragment></React.Fragment>}
+          {
+            this.state.loading ?
+            <img src={loadspinner} className="animate-spin w-10 mx-3 inline" />
+              :                            
+            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printPDF}>Print</button>
+          }          
         </div>
       </div>
     );
