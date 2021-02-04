@@ -60,7 +60,7 @@
     "value": "Invoice#"
   },
   "invoice_number": {
-    "input": "<input type='text' name='invoice_number' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Number' value='{{{value}}}'>",
+    "input": "<input type='text' name='invoice_number' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Number' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
     "value": "INV-23"
   },
@@ -70,9 +70,9 @@
     "value": "Invoice Date"
   },
   "invoice_date": {
-    "input": "<input type='text' name='invoice_date' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Date' value='{{{value}}}'>",
+    "input": "<input type='date' name='invoice_date' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Invoice Date' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": "Jan 20, 2020"
+    "value": "2021-03-04"
   },
   "due_date_label": {
     "input": "<input type='text' name='due_date_label' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Due Date' value='{{{value}}}'>",
@@ -80,9 +80,9 @@
     "value": "Due Date"
   },
   "due_date": {
-    "input": "<input type='text' name='due_date' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
+    "input": "<input type='date' name='due_date' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": "Jan 30, 2020"
+    "value": "2021-03-04"
   },
   "notes_label": {
     "input": "<input type='text' name='notes_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Due Date' value='{{{value}}}'>",
