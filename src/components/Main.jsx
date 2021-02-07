@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import parse from "html-react-parser";
-import {extractContext, renderHandleBar} from "../utils/misc";
+import {extractContext, renderHandleBar, toBase64} from "../utils/misc";
 import template from "../templates/default/template";
 import data from "../templates/default/data.json";
 
@@ -18,7 +18,15 @@ class MainComponent extends Component {
     if (e.target.dataset && e.target.dataset.type === "repeater") {
       const index = e.target.dataset.index;
       data["repeater"][index][e.target.name].value = e.target.value;
-    } else {
+    }
+    else if(e.target.name==="company_logo_input"){
+      toBase64(e.target.files[0])
+      .then((base64data)=>{
+        document.getElementById('company_logo').src=base64data;
+      })
+      .catch(err=>console.log(err))
+  }
+   else {
       data[e.target.name].value = e.target.value;
     }
 
@@ -36,6 +44,9 @@ class MainComponent extends Component {
       const data = {...this.state.data}
       data["repeater"].splice(index, 1);
       this.setState({data})
+    }
+    else if(e.target.name==="change-logo"){
+      document.getElementById('fileUploadButton').click();
     }
   }
 

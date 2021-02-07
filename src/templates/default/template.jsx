@@ -9,7 +9,17 @@ var template = `
       {{{city}}} <br/>
     </div>
     <div>
-      {{{company_logo}}}
+      <div>
+      {{#unless previewMode}}    
+        <button class='w-24 h-24 absolute border-solid border-2 border-black-500 border-opacity-20 rounded focus:outline-none' name='change-logo'>
+          <svg class='w-6 inline object-top pointer-events-none ' viewBox='0 0 20 20'>
+            <path fill-rule='evenodd' d='M9.958,5.956c-2.577,0-4.667,2.089-4.667,4.667c0,2.577,2.089,4.667,4.667,4.667s4.667-2.09,4.667-4.667C14.625,8.045,12.535,5.956,9.958,5.956z M9.958,14.123c-1.933,0-3.5-1.568-3.5-3.5c0-1.933,1.567-3.5,3.5-3.5s3.5,1.567,3.5,3.5C13.458,12.555,11.891,14.123,9.958,14.123z M18.124,3.623h-2.916l-0.583-1.167c0,0-0.522-1.167-1.167-1.167h-7c-0.645,0-1.167,1.167-1.167,1.167L4.708,3.623H1.792c-0.645,0-1.167,0.522-1.167,1.167v12.832c0,0.645,0.522,1.168,1.167,1.168h16.333c0.645,0,1.167-0.523,1.167-1.168V4.789C19.291,4.145,18.769,3.623,18.124,3.623z M18.124,17.039c0,0.322-0.261,0.582-0.583,0.582H2.375c-0.323,0-0.583-0.26-0.583-0.582V5.373c0-0.323,0.261-0.583,0.583-0.583h2.954C5.316,4.74,5.292,4.695,5.292,4.643l0.933-1.458c0,0,0.418-0.729,0.934-0.729h5.6c0.516,0,0.934,0.729,0.934,0.729l0.934,1.458c0,0.052-0.024,0.097-0.038,0.146h2.954c0.322,0,0.583,0.261,0.583,0.583V17.039z' clip-rule='evenodd' />
+          </svg>
+        </button>
+        <input name='company_logo_input' class='hidden' type='file' id='fileUploadButton' accept='image/x-png,image/jpeg' />
+      {{/unless}}
+      </div>
+    <img id='company_logo' name='company_logo' class='object-cover w-24 h-24 rounded' src='https://placehold.co/300x300/e2e8f0/e2e8f0' />
     </div>
   </div>
   <div class="flex row justify-between mt-10">

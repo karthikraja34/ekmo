@@ -7,6 +7,8 @@ const DOMPurify = createDOMPurify(window)
 export function renderHandleBar(rawHtml, context={}) {
   const html = Handlebars.compile(rawHtml)(context)
   return DOMPurify.sanitize(html)
+  //console.log(html);
+  //return html;
 }
 
 export function extractContext(data, previewMode = false) {
@@ -32,3 +34,10 @@ export function extractContext(data, previewMode = false) {
   context["previewMode"] = previewMode
   return context
 }
+
+export const toBase64 = file => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => resolve(reader.result);
+  reader.onerror = error => reject(error);
+});
