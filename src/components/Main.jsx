@@ -4,14 +4,14 @@ import axios from 'axios';
 import {extractContext, renderHandleBar} from "../utils/misc";
 import template from "../templates/default/template";
 import data from "../templates/default/data.json";
-import loadspinner from "../assets/loading.svg";
+import loadingIcon from "../assets/loading";
 
 class MainComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       "previewMode": false,      
-      loading: false,
+      "printingPDF": false,
       data:  JSON.parse(JSON.stringify(data))
     }
     this.invoiceRef = React.createRef();
@@ -43,29 +43,29 @@ class MainComponent extends Component {
     }
   }
 
-  printPDF = () => {     
-    this.setState({loading:!this.state.loading})   
-    const htmlComponent = this.state.data.header+this.invoiceRef.current.outerHTML+this.state.data.footer;
+  printPDF = () => {
+    this.setState({ printingPDF: !this.state.printingPDF })
+    const htmlComponent = this.state.data.header + this.invoiceRef.current.outerHTML + this.state.data.footer;
     return axios(
       `${process.env.REACT_APP_EKMO_SERVER_ENDPOINT}/downloadpdf`,
-        {       
-          method: 'POST',          
-          data: {htmlComponent},
-          responseType: 'blob', // important
-        }
-      ).then((response) => {      
-      const blob = new Blob([response.data], { type: 'application/pdf' })            
+      {
+        method: 'POST',
+        data: { htmlComponent },
+        responseType: 'blob',
+      }
+    ).then((response) => {
+      const blob = new Blob([response.data], { type: 'application/pdf' })
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
       link.download = `invoice.pdf`
-      this.setState({loading:!this.state.loading})
+      this.setState({ printingPDF: !this.state.printingPDF })
       link.click()
     })
-      .catch(err => { 
-        console.log(err) 
-        this.setState({loading:!this.state.loading})
+      .catch(err => {
+        console.log(err)
+        this.setState({ printingPDF: !this.state.printingPDF })
       })
-     
+
   }
 
   render() {
@@ -90,13 +90,12 @@ class MainComponent extends Component {
             this.setState({ previewMode: !this.state.previewMode })
           }}>
             Toggle Preview Mode
-          </button>
-          {
-            this.state.loading ?
-            <img src={loadspinner} className="animate-spin w-10 mx-3 inline" />
-              :                            
-            <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printPDF}>Print</button>
-          }          
+          </button>                     
+          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printPDF}>
+            {
+              this.state.printingPDF ? loadingIcon : 'Print'
+            }
+          </button>         
         </div>
       </div>
     );

@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const generatePDF = require('./puppeteer/pdf_generator');
 const utils = require('./utils');
 const fileUtil = new utils.fileUtil();
 
+dotenv.config();
 const app = express();
 
 app.use(cors());
@@ -21,10 +23,10 @@ app.post('/downloadpdf', async (req, res) => {
     });
     res.send(resultPDF);
   }
-  catch (e) {
-    console.log(e)
+  catch (exception) {
+    console.error(exception)
     res.status(500).send('Something broke!')
   }
 });
 
-app.listen(4000, () => { console.log('listening on port 4000') });
+app.listen(process.env.PORT, () => { console.log(`listening on port ${process.env.PORT}`)});
