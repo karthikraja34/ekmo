@@ -4,6 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const generatePDF = require('./puppeteer/pdf_generator');
 const utils = require('./utils');
+const { v4: uuid } = require('uuid');
 const fileUtil = new utils.fileUtil();
 
 dotenv.config();
@@ -14,7 +15,7 @@ app.use(bodyParser.json())
 
 app.post('/downloadpdf', async (req, res) => {
   try {
-    const filepath = fileUtil.createFile(req.body.htmlComponent, 'invoice.html');
+    const filepath = fileUtil.createFile(req.body.htmlComponent, `${uuid()}.html`);
     const resultPDF = await generatePDF(filepath);
     fileUtil.deleteFile(filepath);
     res.set({
