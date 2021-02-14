@@ -1,4 +1,6 @@
 {
+  "header" : "<html style='-webkit-print-color-adjust: exact;'><head><link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'></head><body>",
+  "footer" : "</body></html>",
   "company_name": {
     "input": "<input type='text' name='company_name' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Company Name' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
