@@ -1,0 +1,219 @@
+{ "header" : "<html style='-webkit-print-color-adjust: exact;'><head><link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'></head><body>",
+    "footer" : "</body></html>",
+  "CompanyName":{
+    "input":"<input name='CompanyName' type='text' class='font-bold focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white text-2xl mt-7 ml-7' placeholder='Company Name'  value='{{{value}}}' />",
+    "output":"<span class='inline-block inline-block font-bold focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white text-2xl mt-7 ml-7' >{{{value}}}</span>",
+    "value":""
+  },
+  "InvoiceLabel":{
+    "input":"<input name='InvoiceLabel' type='text' class='font-bold w-32 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' placeholder='Invoice Label' value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-32 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' >{{{value}}}</span>",
+    "value":"Invoice Number"
+  },
+  "InvoiceNumber":{
+    "input":"<input name='InvoiceNumber' type='text' class='w-36 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' placeholder='Invoice Number'   value='{{{value}}}' />",
+    "output":"<span class='inline-block w-36 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' >{{{value}}}</span>",
+    "value":"#123"
+  },
+  "DateLabel":{
+    "input":"<input name='DateLabel' type='text' class='font-bold w-32 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' placeholder='Date'  value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-32 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' >{{{value}}}</span>",
+    "value":"Date"
+  },
+  "Date":{
+    "input":"<input name='Date' type='date' class='w-36 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' placeholder='Date' value='{{{value}}}' />",
+    "output":"<span class='inline-block w-36 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' >{{{value}}}</span>",
+    "value":"2021-02-22"
+  },
+  "DueDateLabel":{
+    "input":"<input name='DueDateLabel' type='text' class='font-bold w-32 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' placeholder='Due Date'  value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-32 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' >{{{value}}}</span>",
+    "value":"Due Date"
+  },
+  "DueDate":{
+    "input":"<input name='DueDate' type='date' class='w-36 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' placeholder='Due Date' value='{{{value}}}' />",
+    "output":"<span class='inline-block w-36 focus:outline-none bg-transparent focus:ring-1 focus:ring-white placeholder-white text-white' >{{{value}}}</span>",
+    "value":"2021-02-22"
+  },
+  "INVOICETOLabel":{
+    "input":"<input name='INVOICETOLabel' type='text' class='font-bold w-60 focus:outline-none bg-yellow-500 focus:ring focus:border-blue-900 placeholder-white text-white text-right' placeholder='INVOICE TO'  value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-60 focus:outline-none bg-yellow-500 focus:ring focus:border-blue-900 placeholder-white text-white text-right' >{{{value}}}</span>",
+    "value":"INVOICE TO"
+  },
+  "ClientName":{
+    "input":"<input name='ClientName' type='text' class='font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' placeholder='Client Name'  value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' >{{{value}}}</span>",
+    "value":""
+  },
+  "ClientAddressLine1":{
+    "input":"<input name='ClientAddressLine1' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' placeholder='Address Line 1'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' >{{{value}}}</span>",
+    "value":""
+  },
+  "ClientAddressLine2":{
+    "input":"<input name='ClientAddressLine2' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' placeholder='Address Line 2'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' >{{{value}}}</span>",
+    "value":""
+  },
+  "ClientPhoneNumber":{
+    "input":"<input name='ClientPhoneNumber' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' placeholder='Phone Number'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' >{{{value}}}</span>",
+    "value":""
+  },
+  "ClientMail":{
+    "input":"<input name='ClientMail' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' placeholder='Mail' value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-right' >{{{value}}}</span>",
+    "value":""
+  },
+  "Address":{
+    "input":"<input name='Address' type='text' class='font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Address'  value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":"Address"
+  },
+  "AddressLine1":{
+    "input":"<input name='AddressLine1' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Address Line 1'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":""
+  },
+  "AddressLine2":{
+    "input":"<input name='AddressLine2' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Address Line 2'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":""
+  },
+  "PhoneNumberLabel":{
+    "input":"<input name='PhoneNumberLabel' type='text' class='font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Phone Number'  value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":"Phone Number"
+  },
+  "PhoneNumber1":{
+    "input":"<input name='PhoneNumber1' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Phone Number 1'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":""
+  },
+  "PhoneNumber2":{
+    "input":"<input name='PhoneNumber2' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Phone Number 2'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":""
+  },
+  "EmailLabel":{
+    "input":"<input name='EmailLabel' type='text' class='font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Email'  value='{{{value}}}' />",
+    "output":"<span class='inline-block font-bold w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":"Email"
+  },
+  "Mail1":{
+    "input":"<input name='Mail1' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Mail 1'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":""
+  },
+  "Mail2":{
+    "input":"<input name='Mail2' type='text' class='w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' placeholder='Mail 2'  value='{{{value}}}' />",
+    "output":"<span class='inline-block w-60 focus:outline-none bg-transparent focus:ring focus:border-blue-900 placeholder-black text-black text-center' >{{{value}}}</span>",
+    "value":""
+  },
+  "terms_label": {
+    "input": "<input type='text' name='terms_label' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Terms Label' value='{{{value}}}'>",
+    "output": "<span class='px-3 mt-10 inline-block focus:outline-none focus:ring bg-transparent focus:border-blue-900 '>{{{value}}}</span>",
+    "value": "Terms & Conditions"
+  },
+  "terms": {
+    "input": "<textarea name='terms' class='px-3 focus:outline-none focus:ring w-full bg-transparent focus:border-blue-900 ' placeholder='Terms' value='{{{value}}}'>",
+    "output": "<span class='px-3 focus:outline-none focus:ring w-full bg-transparent focus:border-blue-900 ' >{{{value}}}</span>",
+    "value": "Please make the payment by the due date."
+  },
+  "repeater": [
+        {
+          "description": {
+            "input": "<input data-type='repeater' data-index={{index}} name='description' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          },
+          "quantity": {
+            "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          },
+          "rate": {
+            "input": "<input data-type='repeater' data-index={{index}} name='rate' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          },
+          "amount": {
+            "input": "<input data-type='repeater' data-index={{index}} name='amount' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          }
+        },
+        {
+          "description": {
+            "input": "<input data-type='repeater' data-index={{index}} name='description' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          },
+          "quantity": {
+            "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          },
+          "rate": {
+            "input": "<input data-type='repeater' data-index={{index}} name='rate' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          },
+          "amount": {
+            "input": "<input data-type='repeater' data-index={{index}} name='amount' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' >",
+            "output": "<span>{{{value}}}</span>",
+            "value": ""
+          }
+        }
+      ],
+      "repeater2":[
+          {
+              "label": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='label' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Sub total' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": "Sub total"
+              },
+              "val": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='val' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": ""
+              }
+          },
+          {
+              "label": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='label' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Tax' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": "Tax"
+              },
+              "val": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='val' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='18%' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": ""
+              }
+          },
+          {
+              "label": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='label' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Discount' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": "Discount"
+              },
+              "val": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='val' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='5%' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": ""
+              }
+          },
+          {
+              "label": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='label' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Grand Total' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": "Grand Total"
+              },
+              "val": {
+                "input": "<input data-type='repeater2' data-index={{index}} name='val' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 text-bold placeholder-gray-800' placeholder='Total' value='{{{value}}}' >",
+                "output": "<span>{{{value}}}</span>",
+                "value": ""
+              }
+          }
+      ]
+    }
