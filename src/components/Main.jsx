@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import parse from "html-react-parser";
 import axios from 'axios';
 import {extractContext, renderHandleBar} from "../utils/misc";
-import template from "../templates/default/template";
-import data from "../templates/default/data.json";
+import template from "../templates/default/template2/template";
+import data from "../templates/default/template2/data.json";
 import loadingIcon from "../assets/loading";
 
 class MainComponent extends Component {
