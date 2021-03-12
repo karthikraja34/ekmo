@@ -9,22 +9,22 @@
   "your_name": {
     "input": "<input type='text' name='your_name' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Your Name' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "company_gstin": {
     "input": "<input type='text' name='company_gstin' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Company GSTN' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "address": {
     "input": "<input type='text' name='address' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Company Adddress' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "city": {
     "input": "<input type='text' name='city' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='City' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "company_logo": {
     "input": "<input type='text' name='company_logo' class='px-3 focus:outline-none text-right text-3xl focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Company Name' value='{{{value}}}'>",
@@ -39,22 +39,22 @@
   "client_company": {
     "input": "<input type='text' name='client_company' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Company Name' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "client_name": {
     "input": "<input type='text' name='client_name' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Client's Name' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "client_gstin": {
     "input": "<input type='text' name='client_gstin' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Client's GSTN' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "client_address": {
     "input": "<input type='text' name='client_address' class='px-3 focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Client's Address' value='{{{value}}}'>",
     "output": "<span>{{{value}}}</span>",
-    "value": ""
+    "value": "Test"
   },
   "invoice_number_label": {
     "input": "<input type='text' name='invoice_number_label' class='px-3 w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 placeholder-gray-800' placeholder='Invoice Number' value='{{{value}}}'>",
@@ -111,44 +111,44 @@
       "description": {
         "input": "<input data-type='repeater' data-index={{index}} name='description' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       },
       "quantity": {
         "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       },
       "rate": {
         "input": "<input data-type='repeater' data-index={{index}} name='rate' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       },
       "amount": {
         "input": "<input data-type='repeater' data-index={{index}} name='amount' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       }
     },
         {
       "description": {
         "input": "<input data-type='repeater' data-index={{index}} name='description' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Description' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       },
       "quantity": {
         "input": "<input data-type='repeater' data-index={{index}} name='quantity' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Quantity' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       },
       "rate": {
         "input": "<input data-type='repeater' data-index={{index}} name='rate' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Rate' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       },
       "amount": {
         "input": "<input data-type='repeater' data-index={{index}} name='amount' class='w-full focus:outline-none focus:ring bg-transparent focus:border-blue-900 ' placeholder='Amount' value='{{{value}}}'>",
         "output": "<span>{{{value}}}</span>",
-        "value": ""
+        "value": "Test"
       }
     }
   ]

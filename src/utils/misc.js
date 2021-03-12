@@ -4,6 +4,10 @@ import createDOMPurify from 'dompurify'
 
 const DOMPurify = createDOMPurify(window)
 
+Handlebars.registerHelper('odd', function(conditional) {
+  return conditional % 2;
+});
+
 export function renderHandleBar(rawHtml, context={}) {
   const html = Handlebars.compile(rawHtml)(context)
   return DOMPurify.sanitize(html)

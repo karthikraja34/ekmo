@@ -1,5 +1,5 @@
 var template = `
-<div class=" mx-auto bg-white p-7 m-5">
+<div class=" mx-auto bg-white p-7 m-5" id="template">
   <div class="flex row justify-between">
     <div>
       {{{company_name}}} <br/>
