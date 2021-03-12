@@ -43,6 +43,32 @@ class MainComponent extends Component {
     }
   }
 
+  printTemplate=()=>{
+    var prtContent = document.getElementById("template");
+    var WinPrint = window.open('', '', 'left=0,top=0,width=700,height=900, toolbar=0,scrollbars=0,status=0');
+    WinPrint.document.write(`<html style='-webkit-print-color-adjust: exact;'><head>
+    <link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'>
+    </head>
+    <style>
+    @page{
+      margin:0;
+    }
+    @media print {
+      html, body {
+        width: 210mm;
+      }
+    }
+    </style>
+    <body>`+prtContent.innerHTML+`</body></html>`);
+
+    WinPrint.document.close();
+    WinPrint.focus();
+    setTimeout(()=>{
+      WinPrint.print();
+      WinPrint.close();
+    },1000)
+  }
+
   printPDF = () => {
     this.setState({ printingPDF: !this.state.printingPDF })
     const htmlComponent = this.state.data.header + this.invoiceRef.current.outerHTML + this.state.data.footer;
@@ -91,11 +117,16 @@ class MainComponent extends Component {
           }}>
             Toggle Preview Mode
           </button>                     
-          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printPDF}>
+          {/* <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printPDF}>
             {
               this.state.printingPDF ? loadingIcon : 'Print'
             }
-          </button>         
+          </button> */}
+          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printTemplate}>
+            {
+              this.state.printingPDF ? loadingIcon : 'Print'
+            }
+          </button>        
         </div>
       </div>
     );
