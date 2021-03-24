@@ -32,3 +32,28 @@ export function extractContext(data, previewMode = false) {
   context["previewMode"] = previewMode
   return context
 }
+
+export function printTemplate(templateHTML){
+  var WinPrint = window.open('', '', 'left=0,top=0,width=900,height=900, toolbar=0,scrollbars=0,status=0');
+  WinPrint.document.write(`<html style='-webkit-print-color-adjust: exact;'><head>
+  <link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'>
+  </head>
+  <style>
+  @page{
+    margin:0;
+  }
+  @media print {
+    html, body {
+      width: 210mm;
+    }
+  }
+  </style>
+  <body>`+templateHTML.innerHTML+`</body></html>`);
+
+  WinPrint.document.close();
+  WinPrint.focus();
+  setTimeout(()=>{
+    WinPrint.print();
+    WinPrint.close();
+  },1000)
+}

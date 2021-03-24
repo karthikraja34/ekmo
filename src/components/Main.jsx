@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import parse from "html-react-parser";
 import axios from 'axios';
-import {extractContext, renderHandleBar} from "../utils/misc";
+import {extractContext, renderHandleBar,printTemplate} from "../utils/misc";
 import template from "../templates/default/template";
 import data from "../templates/default/data.json";
 import loadingIcon from "../assets/loading";
@@ -43,6 +43,11 @@ class MainComponent extends Component {
     }
   }
 
+  printInvoice=()=>{
+    var prtContent = document.getElementById("template");
+    printTemplate(prtContent);
+  }
+
   printPDF = () => {
     this.setState({ printingPDF: !this.state.printingPDF })
     const htmlComponent = this.state.data.header + this.invoiceRef.current.outerHTML + this.state.data.footer;
@@ -71,8 +76,8 @@ class MainComponent extends Component {
   render() {
     const rawHTML = renderHandleBar(template, extractContext(this.state.data, this.state.previewMode))
     return (
-      <div>
-        <div ref={this.invoiceRef}>
+      <div >
+        <div ref={this.invoiceRef} id="template">
           {parse(rawHTML, {
             replace: domNode => {
               if (domNode.name === "input" || domNode.name === "textarea") {
@@ -91,11 +96,11 @@ class MainComponent extends Component {
           }}>
             Toggle Preview Mode
           </button>                     
-          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printPDF}>
+          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printInvoice}>
             {
               this.state.printingPDF ? loadingIcon : 'Print'
             }
-          </button>         
+          </button>        
         </div>
       </div>
     );
