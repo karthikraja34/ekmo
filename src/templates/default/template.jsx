@@ -1,5 +1,5 @@
 var template = `
-<div id="template">
+<div>
   <div class=" mx-auto bg-white p-7 m-5">
     <div class="flex row justify-between">
       <div>

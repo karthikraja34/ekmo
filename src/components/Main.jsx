@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import parse from "html-react-parser";
 import axios from 'axios';
-import {extractContext, renderHandleBar} from "../utils/misc";
+import {extractContext, renderHandleBar,printTemplate} from "../utils/misc";
 import template from "../templates/default/template";
 import data from "../templates/default/data.json";
 import loadingIcon from "../assets/loading";
@@ -43,30 +43,9 @@ class MainComponent extends Component {
     }
   }
 
-  printTemplate=()=>{
+  printInvoice=()=>{
     var prtContent = document.getElementById("template");
-    var WinPrint = window.open('', '', 'left=0,top=0,width=700,height=900, toolbar=0,scrollbars=0,status=0');
-    WinPrint.document.write(`<html style='-webkit-print-color-adjust: exact;'><head>
-    <link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'>
-    </head>
-    <style>
-    @page{
-      margin:0;
-    }
-    @media print {
-      html, body {
-        width: 210mm;
-      }
-    }
-    </style>
-    <body>`+prtContent.innerHTML+`</body></html>`);
-
-    WinPrint.document.close();
-    WinPrint.focus();
-    setTimeout(()=>{
-      WinPrint.print();
-      WinPrint.close();
-    },1000)
+    printTemplate(prtContent);
   }
 
   printPDF = () => {
@@ -97,8 +76,8 @@ class MainComponent extends Component {
   render() {
     const rawHTML = renderHandleBar(template, extractContext(this.state.data, this.state.previewMode))
     return (
-      <div>
-        <div ref={this.invoiceRef}>
+      <div >
+        <div ref={this.invoiceRef} id="template">
           {parse(rawHTML, {
             replace: domNode => {
               if (domNode.name === "input" || domNode.name === "textarea") {
@@ -117,12 +96,7 @@ class MainComponent extends Component {
           }}>
             Toggle Preview Mode
           </button>                     
-          {/* <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printPDF}>
-            {
-              this.state.printingPDF ? loadingIcon : 'Print'
-            }
-          </button> */}
-          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printTemplate}>
+          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mx-3 rounded" onClick={this.printInvoice}>
             {
               this.state.printingPDF ? loadingIcon : 'Print'
             }
